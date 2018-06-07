@@ -3,12 +3,13 @@ require_relative 'policies/teenager'
 require_relative 'policies/adult'
 
 class Person
-  attr_accessor :name, :age
+  attr_accessor :name, :age, :with_adult
   attr_reader   :policy
 
-  def initialize(name, age)
+  def initialize(name, age, with_adult)
     @name = name
     @age  = age
+    @with_adult = with_adult
     set_policy!
   end
 
@@ -20,8 +21,8 @@ class Person
 
   # Returns which movie policy to use
   # for a given age (e.g. :pg_13)
-  # 
-  # More info here: 
+  #
+  # More info here:
   # https://en.wikipedia.org/wiki/Motion_picture_content_rating_system#United_States
   #
   # @param [Integer] age
@@ -29,7 +30,7 @@ class Person
   def policy_from_age(age)
     # Available ratings:
     # [:pg, :pg_13, :r]
-    return adult_policy     if age >= 17
+    return adult_policy     if age >= 21
     return teenager_policy  if age >= 13
 
     child_policy
