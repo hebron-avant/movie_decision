@@ -8,6 +8,7 @@ MovieDecision is an example Decision.
 mkdir -p ~/projects && cd ~/projects
 git clone git@github.com:hebron-avant/movie_decision.git
 cd movie_decision
+bundle instlal
 bin/start
 ```
 
