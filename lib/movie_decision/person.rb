@@ -20,8 +20,8 @@ class Person
 
   # Returns which movie policy to use
   # for a given age (e.g. :pg_13)
-  # 
-  # More info here: 
+  #
+  # More info here:
   # https://en.wikipedia.org/wiki/Motion_picture_content_rating_system#United_States
   #
   # @param [Integer] age
@@ -29,7 +29,7 @@ class Person
   def policy_from_age(age)
     # Available ratings:
     # [:pg, :pg_13, :r]
-    return adult_policy     if age >= 17
+    return adult_policy     if age >= 21
     return teenager_policy  if age >= 13
 
     child_policy
