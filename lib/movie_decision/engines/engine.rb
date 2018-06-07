@@ -1,3 +1,4 @@
+require 'pry'
 module MovieDecision
   class Engine
     attr_reader :stats
@@ -13,7 +14,15 @@ module MovieDecision
       }
     end
 
-    private 
+    private
+
+    def rating_hash
+      {
+        r: 3,
+        pg_13: 2,
+        pg: 1
+      }
+    end
 
     def decline_reasons
       reasons = []
@@ -21,12 +30,12 @@ module MovieDecision
       reasons << :rating          if too_young?
       reasons << :movie_length    if movie_too_long?
       reasons << :rotten_tomatoes if movie_rating_too_low?
-
+      # binding.pry
       reasons
     end
 
     def too_young?
-      stats[:max_rating] != stats[:actual_movie_rating]
+      rating_hash[stats[:actual_movie_rating]] > rating_hash[stats[:max_rating]]
     end
 
     def movie_too_long?

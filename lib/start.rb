@@ -15,13 +15,14 @@ class MovieRunner
     {name: "Love Actually", rating: :r, rotten_tomatoes: 0.63, length: 135},
     {name: "Beauty and the Beast (1991)", rating: :pg, rotten_tomatoes: 0.94, length: 85},
     {name: "Harry Potter and the Sorcerer's Stone", rating: :pg, rotten_tomatoes: 0.80, length: 152},
-    {name: "The Lord of the Rings: The Two Towers", rating: :pg_13, rotten_tomatoes: 0.95, length: 180}, 
+    {name: "The Lord of the Rings: The Two Towers", rating: :pg_13, rotten_tomatoes: 0.95, length: 180},
     {name: "The Dark Knight", rating: :pg_13, rotten_tomatoes: 0.94, length: 152},
     {name: "Ace Ventura: Pet Detective", rating: :pg_13, rotten_tomatoes: 0.46, length: 86},
     {name: "Lock, Stock and Two Smoking Barrels", rating: :r, rotten_tomatoes: 0.77, length: 105},
     {name: "Die Hard", rating: :r, rotten_tomatoes: 0.93, length: 114},
     {name: "Raiders of the Lost Ark", rating: :pg, rotten_tomatoes: 0.94, length: 115},
     {name: "Léon: The Professional", rating: :r, rotten_tomatoes: 0.71 , length: 104},
+    {name: "Gladiator", rating: :r, rotten_tomatoes: 0.77, length: 155}
   ]
   end
 
