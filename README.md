@@ -11,7 +11,7 @@ cd movie_decision
 bin/start
 ```
 
-## New Things
+## TODOs
 
 * Add a new movie: Gladiator
 
