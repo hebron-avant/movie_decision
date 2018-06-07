@@ -22,7 +22,8 @@ class MovieRunner
     {name: "Die Hard", rating: :r, rotten_tomatoes: 0.93, length: 114},
     {name: "Raiders of the Lost Ark", rating: :pg, rotten_tomatoes: 0.94, length: 115},
     {name: "Léon: The Professional", rating: :r, rotten_tomatoes: 0.71 , length: 104},
-    {name: "Gladiator", rating: :r, rotten_tomatoes: 0.77, length: 155}
+    {name: "Gladiator", rating: :r, rotten_tomatoes: 0.77, length: 155},
+    {name: "Some fake movie", rating: :r, rotten_tomatoes: 0.8, length: 85}
   ]
   end
 
@@ -40,8 +41,8 @@ class MovieRunner
   def create_person
     name = get_name
     age  = get_age
-
-    Person.new(name, age)
+    with_adult = get_with_adult
+    Person.new(name, age, with_adult)
   end
 
   def get_name
@@ -52,6 +53,11 @@ class MovieRunner
   def get_age
     print "How old are you? "
     gets.chomp.to_i
+  end
+
+  def get_with_adult
+    print "Do you have an adult with you? (Y/n)"
+    gets.chomp == 'Y'
   end
 
   def start

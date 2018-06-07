@@ -3,12 +3,13 @@ require_relative 'policies/teenager'
 require_relative 'policies/adult'
 
 class Person
-  attr_accessor :name, :age
+  attr_accessor :name, :age, :with_adult
   attr_reader   :policy
 
-  def initialize(name, age)
+  def initialize(name, age, with_adult)
     @name = name
     @age  = age
+    @with_adult = with_adult
     set_policy!
   end
 

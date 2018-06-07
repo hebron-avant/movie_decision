@@ -14,8 +14,9 @@ module MovieDecision
       {
         age:                        person.age,
         movie_name:                 movie[:name],
+        with_adult:                 person.with_adult,
 
-        max_rating:                 policy.max_rating,
+        max_rating:                 person.with_adult ? :r : policy.max_rating,
         actual_movie_rating:        movie[:rating],
 
         min_rotten_tomatoes_rating: policy.min_rotten_tomatoes_rating,
