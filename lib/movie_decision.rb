@@ -7,7 +7,7 @@ module MovieDecision
   class DecisionMaker
 
     # Builds a decision on whether to 
-    # watch a movie or not
+    # allow a person to watch a movie
     #
     # movie_application is expected to look like:
     # {
